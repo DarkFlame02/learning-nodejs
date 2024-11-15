@@ -1,5 +1,11 @@
 # API Rest en TypeScript con Node.js + Express
 
+Requisitos para seguir este tutorial:
+
+- Instalar [Node.js](https://nodejs.org/)
+- Instalar [Visual Studio Code](https://code.visualstudio.com/)
+- El código propuesto es muy sencillo, pero no viene mal tener unos conocimientos básicos de [TypeScript](https://www.typescriptlang.org/)
+
 ## Crear el proyecto Node.js
 
 Creamos el directorio del proyecto e inicializamos el proyecto Node.js:
