@@ -32,7 +32,7 @@ class Hipoteca {
         if (!numeroValido(interes)) {
             throw new Error('El interés debe ser un número mayor que cero');
         }
-        if (!numeroValido(interes)) {
+        if (!numeroValido(años)) {
             throw new Error('El plazo debe ser un número mayor que cero');
         }
         this.capital = capital;
