@@ -1,4 +1,4 @@
-# API Rest con Node.js + Express
+# API Rest en TypeScript con Node.js + Express
 
 ## Crear el proyecto Node.js
 
