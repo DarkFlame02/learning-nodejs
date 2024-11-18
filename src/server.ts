@@ -1,38 +1,34 @@
-import express from 'express';
-import Hipoteca from './hipoteca';
+import express, { Express, Request, Response } from 'express';
+import { Hipoteca, Cuota } from './hipoteca';
 
-const app = express();
-const port = 3000;
+const app: Express = express();
+const port: number = 3000;
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
     res.send('Learning Node.js + Express + TypeScript!');
 });
 
-app.get('/hello', (req, res) => {
+app.get('/hello', (req: Request, res: Response) => {
     const greeting = {
         message: 'Aprendiendo Node.js + Express + TypeScript !',
         date: new Date()
     }
-    res.type('application/json');
-    res.send(greeting);
+    res.json(greeting);
 });
 
-app.get('/hipoteca', (req, res) => {
-    const capital = Number(req.query.capital);
-    const interes = Number(req.query.interes);
-    const plazo = Number(req.query.plazo);
+app.get('/hipoteca', (req: Request, res: Response) => {
+    const capital: number = Number(req.query.capital);
+    const interes: number = Number(req.query.interes);
+    const plazo: number = Number(req.query.plazo);
     try {
-        const hipoteca = new Hipoteca(capital, interes, plazo);
-        let cuotas = hipoteca.calcularCuotas();    
-        res.status(200);
-        res.type('application/json');
-        res.send({ hipoteca, cuotas });
+        const hipoteca : Hipoteca = new Hipoteca(capital, interes, plazo);
+        let cuotas : Cuota[] = hipoteca.calcularCuotas();    
+        res.status(200).json({ hipoteca, cuotas });
     } catch (error) {
-        res.status(400);
         if (error instanceof Error) {
-            res.send({ error: error.message });
+            res.status(400).send({ error: error.message });
         } else {
-            res.send({ error: 'An unknown error occurred' });
+            res.status(500).send({ error: 'An unknown error occurred' });
         }
     }
 });

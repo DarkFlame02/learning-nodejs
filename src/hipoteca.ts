@@ -1,6 +1,6 @@
 import { redondear, numeroValido } from './utils';
 
-class Cuota {
+export class Cuota {
     numero : number = 0;
     anyo : number = 0;
     mes : number = 0;
@@ -20,7 +20,7 @@ class Cuota {
 
 }
 
-class Hipoteca {
+export class Hipoteca {
     public capital: number;
     public interes: number;
     public plazos: number;
@@ -70,5 +70,3 @@ class Hipoteca {
     }
 
 }
-
-export default Hipoteca;
