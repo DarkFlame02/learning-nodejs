@@ -127,7 +127,7 @@ Y añadimos un script en el fichero `package.json`:
 ```json
 {
   "scripts": {
-    "start": "nodemon --exec ts-node dist/server.ts"
+    "start": "nodemon --exec ts-node src/server.ts"
   }
 }
 ```
