@@ -18,8 +18,8 @@ app.get('/hello', (req: Request, res: Response) => {
 
 app.get('/hipoteca', (req: Request, res: Response) => {
     const capital: number = Number(req.query.capital);
-    const interes: number = Number(req.query.interes);
-    const plazo: number = Number(req.query.plazo);
+    const interes: number = Number(req.query.intereses);
+    const plazo: number = Number(req.query.plazos);
     try {
         const hipoteca : Hipoteca = new Hipoteca(capital, interes, plazo);
         let cuotas : Cuota[] = hipoteca.calcularCuotas();    
