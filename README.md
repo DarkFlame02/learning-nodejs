@@ -164,4 +164,4 @@ npm run build
 - [Transpilador](https://es.wikipedia.org/wiki/Transpilador)
 - [CommonJS](https://es.wikipedia.org/wiki/CommonJS)
 - [ECMAScript](https://es.wikipedia.org/wiki/ECMAScript)
-- [tsconfig.json](https://www.typescriptlang.org/tsconfig)    
+- [tsconfig.json](https://www.typescriptlang.org/tsconfig)
